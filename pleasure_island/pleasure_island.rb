@@ -19,18 +19,26 @@ puts hny
 puts ""
 puts "Immediate above/Timed below (per second)"
 puts ""
+
+# refactors multiple method calls
+hny2 = hny[1..10]
+
+puts hny.first
+hny2.each do |tick|
+	p counter { tick }
+end
  
-p hny[0] 
-p counter { hny[1]} 
-p counter { hny[2]} 
-p counter { hny[3]} 
-p counter { hny[4]} 
-p counter { hny[5]} 
-p counter { hny[6]} 
-p counter { hny[7]} 
-p counter { hny[8]} 
-p counter { hny[9]} 
-p counter { hny[10]} 
+# p hny[0] 
+# p counter { hny[1]} 
+# p counter { hny[2]} 
+# p counter { hny[3]} 
+# p counter { hny[4]} 
+# p counter { hny[5]} 
+# p counter { hny[6]} 
+# p counter { hny[7]} 
+# p counter { hny[8]} 
+# p counter { hny[9]} 
+# p counter { hny[10]} 
  
 puts ""
 
