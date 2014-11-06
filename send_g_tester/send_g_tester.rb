@@ -1,5 +1,6 @@
 require 'sendgrid-ruby'
 require 'mail'
+require 'io/console'
 
 # write a test e-mail with SendGrid
 
@@ -17,7 +18,9 @@ require 'mail'
   puts "Enter your password (Please be accurate)"
   puts "----------------------------------------"
   puts ""
-  SENDGRID_PASSWORD = gets.chomp
+  print "Password will be hidden:"
+  puts ""
+  SENDGRID_PASSWORD = STDIN.noecho(&:gets).chomp
   puts ""
   puts "Enter recipient's e-mail address"
   puts "--------------------------------"
